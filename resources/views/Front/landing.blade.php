@@ -54,8 +54,7 @@
                     </div>
                 </div>
             </div>
-            <h2>Agence de communication digitale</h2>
-            <h3>basée à Neuchâtel, Suisse</h3>
+            <h2>Agence de communication digitale <br>basée à Neuchâtel, Suisse</h2>
         </div>
         <div id="services-widget">
             <div id="content">
@@ -76,12 +75,12 @@
                         </div>
                         <div class="service-text hidden">
                             <h3>UI&UX</h3>
-                            <p>Matérialiser une expérience utilisateur pertinente via des interfaces utilisateurs, parcours et scénarisations. Notre équipe se charge de l’ergonomie, de l’accessibilité et des performances de votre projet.
+                            <p>Matérialiser une expérience utilisateur pertinente via des interfaces graphique, parcours et scénarisations. Notre équipe se charge de l’ergonomie, de l’accessibilité et des performances de votre projet.
                             </p>
                         </div>
                         <div class="service-text hidden">
                             <h3>web & web app</h3>
-                            <p>Nos développeurs sont là pour répondre à tous les chalenges. Du classique <i>Wordpress</i> en passant par les E-Commerces ou des outils web métiers afin d’automatiser, simplifier et optimiser.
+                            <p>Nos développeurs sont là pour répondre à tous les chalenges. Du classique <i>Wordpress</i> en passant par les E-Commerces ou des outils web métiers afin d’automatiser, simplifier et optimiser vos outils.
                             </p>
                         </div>
                     </div>
@@ -99,7 +98,8 @@
                 <img src="{{ asset('/img/img_800w/strategie_800w.jpg') }}" alt="" class="slide-item__image">
             </div>
             <div class="slide-item">
-                <img src="{{ asset("/img/michal-kubalczyk.jpg") }}" class="slide-item__image">
+                <!--<img src="{{ asset("/img/michal-kubalczyk.jpg") }}" class="slide-item__image">-->
+                    <img src="{{ asset('/img/img_800w/webmarket_800w.jpg') }}" alt="" class="slide-item__image">
             </div>
             <div class="slide-item">
                 <img src="{{ asset("/img/photo_design-graphique_2.jpg")}}" class="slide-item__image">

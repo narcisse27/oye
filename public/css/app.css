@@ -16,33 +16,35 @@ main {
   }
 
   #mantra h1 {
+    font-family: "Asimove-Light";
     font-size: 48px;
-    line-height: 70px;
+    line-height: 60px;
     float: left;
     width: 90%;
     color: #ffeb0c;
+    letter-spacing: -0.09em;
   }
 }
 
 @media (min-width: 750px) {
   #mantra {
     width: 50%;
-    height: 30vh;
-    margin-left: 2vw;
+    height: 24vh;
+    margin-left: 1vw;
     margin-top: 10vh;
   }
 
   #mantra #mantra-line {
     float: left;
-    width: 5%;
-    height: 130px;
-    margin-right: 5px;
+    width: 6vw;
+    height: 12vh;
+    margin-right: 1.5vw;
     display: block;
-    border-bottom: 2px solid #ffeb0c;
+    border-bottom: 1px solid #ffeb0c;
   }
 
   #mantra #mantra-line.black {
-    border-bottom: 2px solid #000002;
+    border-bottom: 1px solid #000002;
   }
 
   #mantra br {
@@ -50,22 +52,25 @@ main {
   }
 
   #mantra #mantras-list {
-    width: 90%;
+    width: 80%;
     float: left;
     height: 100%;
     overflow: hidden;
   }
 
   #mantra #mantras-list h1 {
-    font-size: 58px;
-    line-height: 70px;
+    font-family: "Asimove-Light";
+    font-size: 48px;
+    line-height: 53px;
     float: left;
     width: 90%;
     color: #ffeb0c;
+    letter-spacing: -0.09em;
   }
 
   #mantra h2 {
     margin-left: 2vw !important;
+    font-family: "Source_Sans_Light" !important;
   }
 }
 
@@ -694,8 +699,8 @@ main {
 @media (min-width: 750px) {
   #services-intro h2 {
     display: block;
-    margin-left: 5vw;
-    margin-top: 50vh;
+    margin-left: 9vw;
+    margin-top: 40vh;
     width: 100%;
     float: left;
   }
@@ -830,12 +835,14 @@ main {
     color: #ffffff !important;
     font-size: 30px;
     text-align: right;
+    padding-right: 7px;
   }
 
   #services-widget #content #service-presentation-text .service-text p {
     padding-left: 5%;
     padding-right: 5%;
     color: #ffffff;
+    font-family: "Source_Sans_Regular";
   }
 
   #services-widget #content #service-presentation-text .service-text.active {
@@ -969,11 +976,13 @@ main {
     color: #ffffff !important;
     font-size: 30px;
     text-align: right;
+    padding-right: 7px;
   }
 
   #services-widget #content #service-presentation-text .service-text p {
     padding-left: 5%;
     color: #ffffff;
+    font-family: Source_Sans_Regular !important;
   }
 
   #services-widget #content #service-presentation-text .service-text.active {
@@ -1037,7 +1046,7 @@ input:-webkit-autofill {
   display: block;
   margin-left: 0%;
   opacity: 1;
-  width: 100%;
+  width: 80%;
   display: block;
 }
 
@@ -1230,7 +1239,7 @@ input:-webkit-autofill {
 
 @media (min-width: 750px) {
   #contact-form {
-    width: 40vw;
+    width: 50vw;
     float: right;
     height: 50vh;
   }
@@ -1241,7 +1250,7 @@ input:-webkit-autofill {
     display: block;
     float: left;
     width: 100vw;
-    margin: 2vw;
+    margin-top: 2vw;
   }
 }
 
@@ -1249,13 +1258,14 @@ input:-webkit-autofill {
   #contact-wrap.contact {
     display: block;
     float: left;
-    width: 46vw;
-    margin: 2vw;
+    width: 40vw;
+    margin-top: 2vw;
   }
 }
 
 #contact-wrap p {
   font-size: 24px;
+  margin-left: 7vw;
 }
 
 @media (min-width: 330px) {
@@ -1323,10 +1333,12 @@ input:-webkit-autofill {
     margin: 2vw;
     width: 96vw;
     height: auto;
+    opacity: 0.8;
   }
 
   #adresse-wrap p {
     margin-bottom: 5vh;
+    margin-left: 5vw;
   }
 }
 
@@ -1346,9 +1358,12 @@ input:-webkit-autofill {
   #copyrights-wrap {
     border-top: 1px solid #000002;
     padding-top: 5px;
-    margin-top: 20%;
+    margin-top: 80%;
     width: 100%;
     height: auto;
+    margin-left: 5vw;
+    font-size: 12px;
+    opacity: 0.7;
   }
 }
 
@@ -1644,6 +1659,11 @@ a.demo--current {
 }
 
 @font-face {
+  font-family: "Asimove-Light";
+  src: url("/fonts/asimov/AsimovDist.otf");
+}
+
+@font-face {
   font-family: "Source_Sans_Bold";
   font-style: bold;
   src: url("/fonts/Source_Sans/SourceSansPro-Bold.ttf");
@@ -1652,6 +1672,11 @@ a.demo--current {
 @font-face {
   font-family: "Source_Sans_Regular";
   src: url("/fonts/Source_Sans/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Source_Sans_Bold";
+  src: url("/fonts/Source_Sans/SourceSansPro-Light.ttf");
 }
 
 body {
@@ -1701,6 +1726,7 @@ textarea {
   float: left;
   height: auto;
   display: block;
+  padding-top: 9vh;
 }
 
 @media (min-width: 330px) {
@@ -1708,7 +1734,7 @@ textarea {
     float: left;
     display: block;
     width: 10%;
-    height: 80px;
+    height: 60px;
     margin-right: 5px;
     border-bottom: 2px solid #000002;
   }
@@ -1720,34 +1746,44 @@ textarea {
   }
 
   #page-title #title h1 {
-    font-size: 64px;
-    line-height: 70px;
-    width: 80%;
+    font-family: "Asimove-Light";
+    font-size: 48px;
+    line-height: 53px;
+    letter-spacing: -0.09em;
   }
 
   #page-title p {
     font-size: 32px;
-    margin-left: calc(5vw + 5px);
+    margin-left: 7vw;
+    font-family: "Source_Sans_Bold";
+    font-size: 20px;
   }
 }
 
 @media (min-width: 750px) {
   #page-title #mantra-line {
-    width: 3vw;
-    height: 80px;
+    width: 6vw;
+    height: 60px;
     margin-right: 5px;
     float: left;
     border-bottom: 2px solid #000002;
   }
 
   #page-title h1 {
-    font-size: 64px;
-    line-height: 70px;
+    font-family: "Asimove-Light";
+    font-size: 48px;
+    line-height: 53px;
+    letter-spacing: -0.09em;
   }
 
   #page-title p {
-    font-size: 32px;
-    margin-left: calc(5vw + 5px);
+    width: 100%;
+    float: left;
+    position: relative;
+    font-size: 20px;
+    margin-left: calc(7vw);
+    font-family: "Source_Sans_Bold";
+    margin-top: -2vh;
   }
 }
 
@@ -1818,9 +1854,21 @@ textarea {
 @media (min-width: 750px) {
   #nav-wrapper #contact-link {
     position: fixed;
-    top: 5.5vh;
+    top: 6vh;
     z-index: 10;
     right: 7.5vw;
+    font-variant: all-small-caps;
+    opacity: 0.8;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    -webkit-transition: 100ms;
+    transition: 100ms;
+  }
+
+  #nav-wrapper #contact-link:hover {
+    opacity: 1;
+    -webkit-transition: 200ms;
+    transition: 200ms;
   }
 }
 
@@ -1846,19 +1894,19 @@ textarea {
   position: fixed;
   display: block;
   z-index: 12;
-  top: 40px;
-  width: 20px;
+  top: 43px;
+  width: 14px;
 }
 
 @media (min-width: 330px) {
   #nav-toggler #yellow-menu-wrap {
-    right: 40px;
+    right: 43px;
   }
 }
 
 @media (min-width: 750px) {
   #nav-toggler #yellow-menu-wrap {
-    right: 50px;
+    right: 53px;
   }
 }
 

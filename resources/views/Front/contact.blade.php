@@ -38,8 +38,8 @@
                 <div id="title">
                     <h1 class="color-black">Contact</h1>
                 </div>
+                <p>Au plaisir de vous rencontrer</p>
             </div>
-            <p>Au plaisir de vous rencontrer</p>
         </div>
         <div class="" id="contact-form">
             <form id="contact-form-html" action="{{ route('sendEmailFontFront') }}" method="post" class="active">
@@ -66,9 +66,9 @@
         </div>
         <div id="adresse-wrap">
             <p>
-                <strong>Rue du Seyon 12</strong> <br>
+                <strong>Rue du Seyon 32</strong> <br>
                 <strong>2000 Neuchâtel | Suisse</strong><br>
-                <strong>hello@oye.agency</strong> <br>
+                hello@oye.agency<br>
             <div id="copyrights-wrap">
                 </hn>
                 ©oye! communication | 2018 | All Rights Reserved
@@ -192,9 +192,9 @@
                     'X-CSRF-Token': $('meta[name="csrf_token"]').attr('content')
                 },
                 data: {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    message: document.getElementById('message').value
+                    name: document.getElementById('_name').value,
+                    email: document.getElementById('_email').value,
+                    message: document.getElementById('_message').value
                 },
                 success: function (response) {
                     goToHomeWithWaitingAndMessage();

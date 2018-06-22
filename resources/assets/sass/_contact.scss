@@ -8,7 +8,7 @@ input:-webkit-autofill{
       display: block;
       margin-left: 0%;
       opacity: 1;
-      width: 100%;
+      width: 80%;
       display: block;
     }
     &.hidden{
@@ -108,7 +108,7 @@ input:-webkit-autofill{
 }
 @media (min-width: 750px) {
   #contact-form{
-    width: 40vw;
+    width: 50vw;
     float: right;
     height: 50vh;
   }
@@ -119,19 +119,20 @@ input:-webkit-autofill{
       display: block;
       float: left;
       width: 100vw;
-      margin: 2vw;
+      margin-top: 2vw;
     }
   }
   @media (min-width: 750px) {
     &.contact{
       display: block;
       float: left;
-      width: 46vw;
-      margin: 2vw;
+      width: 40vw;
+      margin-top: 2vw;
     }
   }
   p{
     font-size: 24px;
+    margin-left: 7vw;
   }
 }
 
@@ -191,8 +192,10 @@ input:-webkit-autofill{
     margin: 2vw;
     width: 96vw;
     height: auto;
+    opacity: 0.8;
     p{
       margin-bottom: 5vh;
+      margin-left: 5vw;
     }
   }
 }
@@ -212,10 +215,13 @@ input:-webkit-autofill{
 }
 @media (min-width: 750px) {
   #copyrights-wrap {
-    border-top: 1px solid #000002;
+    border-top: 1px solid $black;
     padding-top: 5px;
-    margin-top: 20%;
+    margin-top: 80%;
     width: 100%;
     height: auto;
+    margin-left: 5vw;
+    font-size: 12px;
+    opacity: 0.7;
   }
 }

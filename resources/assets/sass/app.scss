@@ -6,6 +6,11 @@
   font-family: "Asimove";
   src: url('/fonts/asimov/AsimovXWid.otf');
 }
+
+@font-face {
+  font-family: "Asimove-Light";
+  src: url('/fonts/asimov/AsimovDist.otf');
+}
 @font-face {
   font-family: "Source_Sans_Bold";
   font-style: bold;
@@ -14,6 +19,10 @@
 @font-face {
   font-family: "Source_Sans_Regular";
   src: url('/fonts/Source_Sans/SourceSansPro-Regular.ttf');
+}
+@font-face {
+  font-family: "Source_Sans_Bold";
+  src: url('/fonts/Source_Sans/SourceSansPro-Light.ttf');
 }
 body{
   margin: 0px;
@@ -50,13 +59,13 @@ input, textarea{
   float: left;
   height: auto;
   display: block;
+  padding-top: 9vh;
   @media (min-width: 330px) {
-
     #mantra-line{
       float: left;
       display: block;
       width: 10%;
-      height: 80px;
+      height: 60px;
       margin-right: 5px;
       border-bottom: 2px solid $black;
     }
@@ -65,31 +74,41 @@ input, textarea{
       height: auto;
       float: left;
       h1{
-        font-size: 64px;
-        line-height: 70px;
-        width: 80%;
+        font-family: "Asimove-Light";
+        font-size: 48px;
+        line-height: 53px;
+        letter-spacing: -0.09em;
       }
     }
     p{
       font-size: 32px;
-      margin-left: calc(5vw + 5px);
+      margin-left: 7vw;
+      font-family: "Source_Sans_Bold";
+      font-size: 20px;
     }
   }
   @media (min-width: 750px) {
     #mantra-line{
-      width: 3vw;
-      height: 80px;
+      width: 6vw;
+      height: 60px;
       margin-right: 5px;
       float: left;
       border-bottom: 2px solid $black;
     }
     h1{
-      font-size: 64px;
-      line-height: 70px;
+      font-family: "Asimove-Light";
+      font-size: 48px;
+      line-height: 53px;
+      letter-spacing: -0.09em;
     }
     p{
-      font-size: 32px;
-      margin-left: calc(5vw + 5px);
+      width: 100%;
+      float: left;
+      position: relative;
+      font-size: 20px;
+      margin-left: calc(7vw);
+      font-family: "Source_Sans_Bold";
+      margin-top: -2vh;
     }
   }
 }
@@ -141,11 +160,20 @@ input, textarea{
   @media (min-width: 750px) {
     #contact-link {
       position: fixed;
-      top: 5.5vh;
+      top: 6vh;
       z-index: 10;
       right: 7.5vw;
+      font-variant: all-small-caps;
+      opacity: 0.8;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      transition: 100ms;
+      &:hover{
+        opacity: 1;
+        transition: 200ms;
+      }
+      }
     }
-  }
 }
 #nav-toggler{
   position: fixed;
@@ -166,14 +194,14 @@ input, textarea{
     position: fixed;
     display: block;
     z-index: 12;
-    top: 40px;
+    top: 43px;
     @media (min-width: 330px) {
-      right: 40px;
+      right: 43px;
     }
     @media (min-width: 750px) {
-      right: 50px;
+      right: 53px;
     }
-    width: 20px;
+    width: 14px;
     .preloader-actived{
       width: 250vw;
       top:-50%;
