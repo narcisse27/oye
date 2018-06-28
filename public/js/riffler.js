@@ -1,8 +1,6 @@
 (function() {
     window.CanvasSlideshow = function( options ) {
       var that  =   this;
-      var divied;
-      console.log(window.innerWidth);
       if(window.innerWidth < 750){
         options.stageWidth          = options.hasOwnProperty('stageWidth') ? options.stageWidth : (window.innerWidth)*2;
       }
@@ -59,21 +57,27 @@
         // Enable Interactions
         stage.interactive = true;
         // Fit renderer to the screen
+        var scaleRate;
+        if(window.innerWidth > 300){
+          scaleRate = 'translate(-50%, -70%) scale(1)';
+        }
+        if(window.innerWidth > 750){
+          scaleRate = 'translate(-50%, -50%) scale(1.2)';
+        }
+        if(window.innerWidth > 1400){
+          scaleRate = 'translate(-34vh, -50%) scale(1.5)';
+        }
+
         if ( options.fullScreen === true ) {
           var width = (window.innerWidth > 750) ? "50vw" : "100vw";
           var left = (window.innerWidth > 750) ? '75%' : "50%";
-          var scale = (window.innerWidth > 750) ? 'translate( -50%, -50% ) scale(1.2)' : 'translate( -50%, -50% ) scale(1)';
           renderer.view.style.objectFit = 'cover';
-          //renderer.view.style.width     = '50vw';
           renderer.view.style.width     = width;
           renderer.view.style.height    = '100%';
-          renderer.view.style.top       = '50%';
-          //renderer.view.style.left      = '75%';
+          renderer.view.style.top       = (window.innerWidth > 1400) ? '65%' : '50%';
           renderer.view.style.left      = left;
-          //renderer.view.style.webkitTransform = 'translate( -50%, -50% ) scale(1.2)';
-          renderer.view.style.webkitTransform = scale;
-          //renderer.view.style.transform = 'translate( -50%, -50% ) scale(1.2)';
-          renderer.view.style.transform = scale;
+          renderer.view.style.webkitTransform = scaleRate;
+          renderer.view.style.transform = scaleRate;
         } else {
           renderer.view.style.maxWidth  = '100%';
           renderer.view.style.top       = '50%';
@@ -334,9 +338,7 @@
               TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0 });                      
               cancelAnimationFrame( rafID );
             }
-
-          };     
-
+          };
           slidesContainer.pointerdown = function( mouseData ){
             mouseX = mouseData.data.global.x;
             mouseY = mouseData.data.global.y;         
@@ -352,15 +354,9 @@
               TweenMax.to( displacementFilter.scale, 1, { x: 0, y: 0 });                      
               cancelAnimationFrame( rafID );
             }
-
-          };              
-
+          };
         }
-      
       }
-      
-      
-      
       /// ---------------------------
       //  CENTER DISPLACEMENT
       /// ---------------------------

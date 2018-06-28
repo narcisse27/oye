@@ -24,22 +24,32 @@ function mantraTransition(position){
          item.style.height = height+"px";
     });
 }
+function disableButtons(){
+    document.getElementsByClassName('scene-nav').disabled = true;
+}
+function enableButtons(){
+    document.getElementsByClassName('scene-nav').disabled = false;
+}
 function goToNextItem(){
     setTimeout(activeTransition, 0);
+    disableButtons;
     document.getElementById("riffle-next-image").click();
     setTimeout(changeNextItem, 500);
     setTimeout(hideTransition, 700);
     refreshLines();
+    enableButtons;
 }
 function goToPreviousItem(){
     setTimeout(activeTransition, 0);
+    disableButtons;
     document.getElementById("riffle-previous-image").click();
     setTimeout(changePreviousItem, 500);
     setTimeout(hideTransition, 700);
+    enableButtons;
 }
 function refreshLines(itemToHide, itemToActive){
-    let items = $('.slide-position');
-    for(let i = 0; i <= items[itemToHide].children.length; i++){
+    var items = $('.slide-position');
+    for(var i = 0; i <= items[itemToHide].children.length; i++){
         items[itemToHide].children[i].classList.remove('active');
         items[itemToHide].children[i].classList.add('hidden');
         items[itemToActive].children[i].classList.remove('hidden');
@@ -67,11 +77,11 @@ function changeNextItem(){
     return nextItemId;
 }
 function changePreviousItem(){
-    let allTexts = document.getElementsByClassName('service-text');
-    let servicesLines = document.getElementsByClassName('slide-position');
-    let length = allTexts.length;
-    let state = false;
-    let i = 0;
+    var allTexts = document.getElementsByClassName('service-text');
+    var servicesLines = document.getElementsByClassName('slide-position');
+    var length = allTexts.length;
+    var state = false;
+    var i = 0;
     while(state === false){
         if(allTexts[i].classList.contains('active')){
             hideThisItem(allTexts[i]);

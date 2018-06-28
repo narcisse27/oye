@@ -41,6 +41,9 @@ body{
 input, textarea{
   padding: 5px;
 }
+input, textarea, button{
+  outline: none;
+}
 .no-margin-bottom{
   margin-bottom: 0px!important;
 }
@@ -64,7 +67,7 @@ input, textarea{
     #mantra-line{
       float: left;
       display: block;
-      width: 10%;
+      width: 5%;
       height: 60px;
       margin-right: 5px;
       border-bottom: 2px solid $black;
@@ -123,11 +126,13 @@ input, textarea{
   background-color: $black;
   opacity: 1;
   animation: bodyAppear 800ms ease-in-out;
+  overflow: hidden;
 }
 .yellow-body{
   background-color: $yellow;
   opacity: 1;
   animation: bodyAppear 800ms ease-in-out;
+  overflow-x: hidden;
   #yellow-menu-elipse-1{
     circle{
       stroke: $black;
@@ -149,12 +154,13 @@ input, textarea{
   100%{opacity: 1;}
 }
 #nav-wrapper{
-  @media (min-width: 330px) {
+  @media (min-width: 300px) {
     #contact-link {
       position: fixed;
-      top: 6vh;
+      top: 6.5vh;
       z-index: 10;
       right: 22vw;
+      padding: 1vh;
     }
   }
   @media (min-width: 750px) {
@@ -194,8 +200,8 @@ input, textarea{
     position: fixed;
     display: block;
     z-index: 12;
-    top: 43px;
-    @media (min-width: 330px) {
+    top: 47px;
+    @media (min-width: 300px) {
       right: 43px;
     }
     @media (min-width: 750px) {
@@ -207,9 +213,9 @@ input, textarea{
       top:-50%;
       right: -75%;
       z-index: 100;
-      transition: 300ms;
+      transition: 700ms;
     }
-    @media (min-width: 330px) {
+    @media (min-width: 300px) {
       &.preloader-active{
         width: 650vw;
         top: -100vh;
@@ -267,14 +273,14 @@ input, textarea{
     z-index: 10;
     transition: 500ms;
     &.loop{
-      top: 40px;
+      top: 44px;
       right: 3.5%;
       width: 3%;
       animation: elipse1Loop 1.8s ease-in-out infinite;
       transition: 500ms;
     }
     &.focus{
-      @media (min-width: 330px) {
+      @media (min-width: 300px) {
         opacity: 1;
         top: 32px;
         right: 32px;
@@ -282,8 +288,9 @@ input, textarea{
       }
       @media (min-width: 750px) {
         opacity: 1;
-        top: 30px;
+        top: 34px;
         right: 40px;
+        width: 40px;
         width: 40px;
       }
       transition: 500ms;
@@ -303,7 +310,7 @@ input, textarea{
     }
     &.focus{
       transition: 500ms;
-      @media (min-width: 330px) {
+      @media (min-width: 300px) {
         opacity: 1;
         top: 35px;
         right: 35px;
@@ -311,29 +318,29 @@ input, textarea{
       }
       @media (min-width: 750px) {
         opacity: 1;
-        top: 35px;
+        top: 39px;
         right: 45px;
         width: 30px;
       }
     }
   }
-  @media (min-width: 330px) {
+  @media (min-width: 300px) {
     @keyframes elipse1Loop {
       0%{
         opacity: 1;
-        top: 32px;
+        top: 36px;
         right: 32px;
         width: 35px;
       }
       50% {
         opacity: 0;
-        top: 28px;
+        top: 32px;
         right: 27px;
         width: 45px;
       }
       100% {
         opacity: 1;
-        top: 32px;
+        top: 36px;
         right: 32px;
         width: 35px;
       }
@@ -341,19 +348,19 @@ input, textarea{
     @keyframes elipse2Loop {
       0%{
         opacity: 1;
-        top: 35px;
+        top: 39px;
         right: 35px;
         width: 30px;
       }
       50%{
         opacity: 0;
-        top: 30px;
+        top: 34px;
         right: 30px;
         width: 40px;
       }
       100%{
         opacity: 1;
-        top: 35px;
+        top: 39px;
         right: 35px;
         width: 30px;
       }
@@ -363,19 +370,19 @@ input, textarea{
     @keyframes elipse1Loop {
       0%{
         opacity: 1;
-        top: 30px;
+        top: 34px;
         right: 40px;
         width: 40px;
       }
       50%{
         opacity: 0;
-        top: 25px;
+        top: 29px;
         right: 35px;
         width: 50px;
       }
       100%{
         opacity: 1;
-        top: 30px;
+        top: 34px;
         right: 40px;
         width: 40px;
       }
@@ -383,19 +390,19 @@ input, textarea{
     @keyframes elipse2Loop {
       0%{
         opacity: 1;
-        top: 35px;
+        top: 39px;
         right: 45px;
         width: 30px;
       }
       50%{
         opacity: 0;
-        top: 30px;
+        top: 34px;
         right: 40px;
         width: 40px;
       }
       100%{
         opacity: 1;
-        top: 35px;
+        top: 39px;
         right: 45px;
         width: 30px;
       }
@@ -404,7 +411,6 @@ input, textarea{
 
 }
 h1 {
-  //font-family: "Helvetica Neue";
   font-family: "Asimove";
   font-size: 48px;
   font-style: normal;
@@ -414,7 +420,6 @@ h1 {
   color: $white;
 }
 h2 {
-  //font-family: "Helvetica Neue";
   font-family: "Source_Sans_Bold";
   font-size: 20px;
   font-style: normal;
@@ -424,7 +429,6 @@ h2 {
   color: $white;
 }
 h3 {
-  //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: "Source_Sans_Bold";
   font-size: 14px;
   font-style: normal;
@@ -433,7 +437,6 @@ h3 {
   line-height: 15.4px;
 }
 p , span{
-  //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: "Source_Sans_Regular";
   font-size: 14px;
   font-style: normal;
@@ -442,7 +445,6 @@ p , span{
   line-height: 20px;
 }
 blockquote {
-  //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: "Source_Sans_Regular";
   font-size: 21px;
   font-style: normal;
@@ -451,7 +453,6 @@ blockquote {
   line-height: 30px;
 }
 pre {
-  //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: "Source_Sans_Regular";
   font-size: 13px;
   font-style: normal;
@@ -464,10 +465,10 @@ a{
   font-family: "Source_Sans_Regular";
 }
 #logo{
-  @media (min-width: 330px) {
+  @media (min-width: 300px) {
     position: fixed;
     z-index: 10;
-    margin-top: 5vh;
+    margin-top: 6vh;
     margin-left: 2vw;
     width: 98vw;
     height: auto;
@@ -491,12 +492,11 @@ a{
   }
 }
 .input-group{
-  @media (min-width: 330px) {
+  @media (min-width: 300px) {
     width: 100%;
     input, textarea{
-      //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-family: "Source_Sans_Regular";
-      width: 80%;
+      width: 100%;
       background-color: $yellow;
       border: 2px solid $white;
       border-radius: 2px;
@@ -515,7 +515,6 @@ a{
   @media (min-width: 750px) {
     width: 100%;
     input, textarea{
-      //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-family: "Source_Sans_Regular";
       width: 100%;
       background-color: $yellow;
@@ -537,13 +536,11 @@ a{
   height: auto;
   margin: 2.5%;
   float: left;
-  //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: "Source_Sans_Regular";
   label{
     width: 100%;
     float: left;
     font-size: 18px;
-    //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-family: "Source_Sans_Regular";
   }
   button{
@@ -553,6 +550,7 @@ a{
     font-size: 34px;
     border: 2px solid $white;
     border-radius: 2px;
+    outline: none;
   }
 }
 // columns

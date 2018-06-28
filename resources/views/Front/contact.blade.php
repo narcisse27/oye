@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114420187-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-114420187-1');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>oye! communication - contact</title>
@@ -15,7 +25,7 @@
     <link rel="shortcut icon" href="{{ asset("/img/favicon_2.png")}}">
     <link rel="stylesheet" type="text/css" href="{{ asset("css/normalize.css ")}}" />
     <link rel="stylesheet" type="text/css" href="{{ asset("css/app.css ")}}" />
-    <meta name="csrf_token" content="{ csrf_token() }" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" >
 </head>
 <body class="yellow-body hide-overflow">
 <main class="site-wrapper yellow-body">
@@ -25,7 +35,7 @@
         </a>
     </div>
     <div id="nav-wrapper">
-        <div id="nav-toggler" onclick="goToContact()" onmouseover="linkOver()" onmouseout="linkLeave()">
+        <div id="nav-toggler" onclick="goToHome()" onmouseover="linkOver()" onmouseout="linkLeave()">
             <svg id="yellow-menu-elipse-2"  class="loop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.2 175.2"><defs><style>.\39 6cff5b3-fce7-4435-9300-d3083c2ac1af{fill:none;stroke:#ffeb0c;stroke-miterlimit:10;stroke-width:3px;}</style></defs><title>Fichier 4</title><g id="756c3ea5-c951-4b9f-b986-f6af3e5b061d" data-name="Calque 2"><g id="f0488e05-3a45-4496-a0c7-d75b7f8a10f1" data-name="Calque 1"><circle class="96cff5b3-fce7-4435-9300-d3083c2ac1af" cx="87.6" cy="87.6" r="86.1"/></g></g></svg>
             <svg id="yellow-menu-elipse-1" class="loop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.87 107.87"><defs><style>.\35 c06db9c-38e3-44e8-a08d-09eb4a2936fa{fill:none;stroke:#ffeb0c;stroke-miterlimit:10;stroke-width:3px;}</style></defs><title>Fichier 3</title><g id="d48a675a-d90a-4835-8a09-007d14cacbfe" data-name="Calque 2"><g id="00ccfec7-d371-4a81-a975-ec37b79ffe1b" data-name="Calque 1"><circle class="5c06db9c-38e3-44e8-a08d-09eb4a2936fa" cx="53.93" cy="53.93" r="52.43"/></g></g></svg>
             <svg id="yellow-menu-wrap" class="preloader-actived" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.13 47.13"><defs><style>.e0bed4ed-9525-48ad-8a91-2eabf5c168e1{fill:#ffeb0c;stroke:#ffeb0c;stroke-miterlimit:10;stroke-width:0.81px;}</style></defs><title>Fichier 2</title><g id="817cb391-05c3-4e50-9bc7-40e645f124b2" data-name="Calque 2"><g id="b074bd06-adac-4a54-9152-b1782fbe5a17" data-name="Calque 1"><circle class="e0bed4ed-9525-48ad-8a91-2eabf5c168e1" cx="23.57" cy="23.57" r="23.16"/></g></g></svg>
@@ -43,17 +53,18 @@
         </div>
         <div class="" id="contact-form">
             <form id="contact-form-html" action="{{ route('sendEmailFontFront') }}" method="post" class="active">
+                <input name="_token" type="hidden" id="_token" value="{{ csrf_token() }}" />
                 <div class="input-group">
                     <label id="name_label" for="name">Nom, Prénom</label>
-                    <input id="_name" type="text" name="_name" autocomplete="asdf">
+                    <input id="_name" type="text" name="_name">
                 </div>
                 <div class="input-group">
                     <label id="email_label" for="email">E-mail</label>
-                    <input id="_email" type="email" name="_email" autocomplete="new-email">
+                    <input id="_email" type="email" name="_email">
                 </div>
                 <div class="input-group no-margin-bottom">
                     <label id="message_label" for="message">Message</label>
-                    <textarea id="_message" cols="30" name="_message" rows="10" autocomplete="off"></textarea>
+                    <textarea id="_message" cols="30" name="_message" rows="10"></textarea>
                 </div>
                 <div id="contact-form-btn-wrap">
                     <button  id="contact-form-btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.56 36.06"><title>Fichier 5</title><g id="d1c91bf7-41c7-4b28-89de-d8ae9c0c9301" data-name="Calque 2"><g id="c76b7386-04dd-4dee-958e-35b027136c09" data-name="Calque 1"><polygon points="21.56 18.03 3.53 36.06 2.82 35.35 2.12 34.65 1.41 33.94 0.7 33.23 0 32.53 14.49 18.03 0 3.54 0.7 2.83 1.41 2.12 2.12 1.42 2.82 0.71 3.53 0 21.56 18.03"/></g></g></svg></button>
@@ -121,7 +132,6 @@
         document.getElementById('yellow-menu-wrap').classList.add('preloader-active');
     }
     function goToHome(){
-        e.preventDefault();
         activePreloader();
         setInterval(function(){
             window.location = "/";
@@ -140,8 +150,8 @@
         e.preventDefault();
         activePreloader();
         setInterval(function(){
-        document.getElementById('success-message').classList.remove('active');
-        document.getElementById('success-message').classList.add('hidden');
+            document.getElementById('success-message').classList.remove('active');
+            document.getElementById('success-message').classList.add('hidden');
         }, 800);
         setInterval(function(){
             var home = "/";
@@ -162,45 +172,49 @@
         if (e.preventDefault) e.preventDefault();
         var error = false;
         if(document.getElementById('_name').value.length < 3){
+            error = true;
             if ( !(document.getElementById('name_label').innerHTML.indexOf("*") >= 0)) {
-                document.getElementById('name_label').innerHTML += " * semble incorrecte";
-                error = true;
+                document.getElementById('name_label').innerHTML = "Nom, Prénom  * semble incorrecte";
+            }else{
+                document.getElementById('name_label').innerHTML = "Nom, Prénom";
             }
         }
         if (!validateEmail(document.getElementById('_email').value)) {
+            error = true;
             if ( !(document.getElementById('email_label').innerHTML.indexOf("*") >= 0)){
-                document.getElementById('email_label').innerHTML += "* est incorrect";
-                error = true;
+                document.getElementById('email_label').innerHTML = "E-Mail * est incorrect";
+            }else{
+                document.getElementById('email_label').innerHTML = "E-mail";
             }
         }
         if(document.getElementById('_message').value.length < 10 ){
+            error = true;
             if (!( document.getElementById('message_label').innerHTML.indexOf("*") >= 0)) {
-                document.getElementById('message_label').innerHTML += "* minimum 10 caractères";
-                error = true;
+                document.getElementById('message_label').innerHTML = "Message * minimum 10 caractères";
+            }else{
+                document.getElementById('message_label').innerHTML = "Message";
             }
         }
-        if(!error) {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        if(error === false) {
             $.ajax({
                 url: "/api/sendMailFromFront",
                 type: "POST", //First change type to method here
-                headers: {
-                    'X-CSRF-Token': $('meta[name="csrf_token"]').attr('content')
-                },
+                dataType: 'json',
                 data: {
                     name: document.getElementById('_name').value,
                     email: document.getElementById('_email').value,
-                    message: document.getElementById('_message').value
+                    message: document.getElementById('_message').value,
+                    _token: $('meta[name="csrf-token"]').attr('content')
                 },
                 success: function (response) {
                     goToHomeWithWaitingAndMessage();
                 },
                 error: function () {
-                    alert("error");
                 }
             });
         }

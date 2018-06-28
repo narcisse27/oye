@@ -34,15 +34,22 @@ class MailerController extends Controller
      */
     public function store(Request $request)
     {
-        $to      = 'hello@oye.agency';
-        $subject = 'envoi depuis site web par '.$request['_name'];
-        $message = $request['_message'];
-        $headers = 'From: ' .$request['_email'] . "\r\n" .
-            'Reply-To: webmaster@example.com' . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
+        //return response()->json('ok', 200);
+        /*
+        if(empty($request['name']) || empty($request['message']) < 8 || empty($request['email'])){
+            return response()->json(['message' => 'error'], 403);
+        }else {
+        */
+            $to = 'hello@oye.agency';
+            $subject = 'envoi depuis site web par ' . $request['name'];
+            $message = $request['message'];
+            $headers = 'From: ' . $request['email'] . "\r\n" .
+                'Reply-To: webmaster@example.com' . "\r\n" .
+                'X-Mailer: PHP/' . phpversion();
 
-        mail($to, $subject, $message, $headers);
-        return response()->json(['message' => 'success'], 200);
+            mail($to, $subject, $message, $headers);
+            return response()->json(['message' => 'success'], 200);
+        //}
     }
 
     /**

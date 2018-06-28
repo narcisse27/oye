@@ -43,19 +43,19 @@ input:-webkit-autofill{
     width: 100%;
     color: $yellow;
     &.active{
-        animation: successMessageAppear 1200ms ease-in-out;
-        display: block;
-        position: fixed;
-        z-index: 20;
+      animation: successMessageAppear 1200ms ease-in-out;
+      display: block;
+      position: fixed;
+      z-index: 20;
       opacity: 1;
-        @media (min-width: 330px) {
-          top: 40%;
-          left: 10%;
-        }
-        @media (min-width: 750px) {
-          top: 40%;
-          left: 30%;
-        }
+      @media (min-width: 330px) {
+        top: 40%;
+        left: 10%;
+      }
+      @media (min-width: 750px) {
+        top: 40%;
+        left: 30%;
+      }
     }
     &.hidden{
       display: none;
@@ -101,7 +101,9 @@ input:-webkit-autofill{
   #contact-form{
     display: block;
     width: 95vw;
-    margin: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 6vw;
     float: left;
     height: auto;
   }
@@ -121,6 +123,16 @@ input:-webkit-autofill{
       width: 100vw;
       margin-top: 2vw;
     }
+    #page-title{
+      p{
+        margin-left: 9vw;
+        font-family: "Source_Sans_Bold";
+        font-size: 20px;
+        width: 100%;
+        float: left;
+        margin-top: -20px;
+      }
+    }
   }
   @media (min-width: 750px) {
     &.contact{
@@ -129,30 +141,46 @@ input:-webkit-autofill{
       width: 40vw;
       margin-top: 2vw;
     }
-  }
-  p{
-    font-size: 24px;
-    margin-left: 7vw;
+    #page-title{
+      p{
+        font-size: 24px;
+        margin-left: 7vw!important;
+      }
+    }
   }
 }
-
 #contact-form-btn-wrap{
-  @media (min-width: 330px) {
+  @media (min-width: 300px) {
     float: left;
-    width: 80%;
-    margin-left: 6%;
+    width: 100%;
     height: auto;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 2.5%;
     button{
       float: right;
       width: 60px;
       height: 40px;
       background: rgba(255, 255, 255, 0);
-      border: 1px solid $white;
+      border: 2px solid $white;
+      margin-top: -1px;
       svg{
         width: auto;
         margin: 10%;
         height: 80%;
         fill: $white!important;
+      }
+      &:focus{
+        border: 1px solid $black;
+        svg{
+          width: auto;
+          margin: 10%;
+          height: 80%;
+          fill: $black!important;
+        }
+        & + textarea{
+          border: 2px solid black!important;
+        }
       }
     }
   }
@@ -161,14 +189,17 @@ input:-webkit-autofill{
     width: 100%;
     height: auto;
     float: left;
-    margin-left: 5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
   button{
     float: right;
     width: 60px;
     height: 40px;
     background: rgba(255, 255, 255, 0);
-    border: 1px solid $white;
+    border: 2px solid $white;
+    margin-top: -1px;
+    margin-right: calc(-2.5% + 4px);
     svg{
       width: auto;
       margin: 10%;
@@ -185,7 +216,7 @@ input:-webkit-autofill{
     }
   }
 }
-@media (min-width: 330px) {
+@media (min-width: 300px) {
   #adresse-wrap{
     float: left;
     display: block;
@@ -210,8 +241,7 @@ input:-webkit-autofill{
     margin-bottom: 0vh;
   }
 }
-
-@media (min-width: 330px) {
+@media (min-width: 300px) {
 }
 @media (min-width: 750px) {
   #copyrights-wrap {

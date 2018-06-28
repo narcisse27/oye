@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114420187-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-114420187-1');
+    </script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"                  content="width=device-width, initial-scale=1">
     <title>oye! communication</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta name="description"               content="oye! communication | Agence de communication digitale basée à Neuchâtel en Suisse. Nous vous accompagnos dans la Stratégie de votre projet, en passant par le Web Marketing, Design Graphique, UI&UX, le développement de sites web et d'application web." />
+    <meta name="keywords"                  content="agence de communication digitale, oye! communication, web&web app, UI&UX, user interfaces, user experience, web marketing, design graphique, print, stratégie, web marketing" />
+    <meta name="author"                    content=""/>
     <meta property="og:url"                content="https://oye.agency/" />
     <meta property="og:type"               content="page" />
     <meta property="og:title"              content="oye! communication | accueil" />
-    <meta property="og:description"        content="description blablaa" />
+    <meta property="og:description"        content="oye! communication | Agence de communication digitale basée à Neuchâtel en Suisse. Nous vous accompagnos dans la Stratégie de votre projet, en passant par le Web Marketing, Design Graphique, UI&UX, le développement de sites web et d'application web." />
     <meta property="og:image"              content="{{ asset('/img/oye-partage.png') }}" />
-    <link rel="shortcut icon" href="{{ asset("/img/favicon_1.png")}}">
     <link rel="stylesheet" type="text/css" href="{{ asset("css/normalize.css ")}}" />
     <link rel="stylesheet" type="text/css" href="{{ asset("css/app.css ")}}" />
-    <script>document.documentElement.className = 'js';</script>
+    <link rel="shortcut icon" href="{{ asset("/img/favicon_1.png")}}">
 </head>
 <body class="black-body">
 <main class="site-wrapper">
@@ -26,7 +34,7 @@
     </div>
     <div id="nav-wrapper">
         <a href="/contact" class="link color-yellow" id="contact-link" onmouseover="linkOver()" onmouseout="linkLeave()">contact</a>
-        <div id="nav-toggler" onclick="goToContact" onmouseover="linkOver()" onmouseout="linkLeave()">
+        <div id="nav-toggler" onclick="goToContact()" onmouseover="linkOver()" onmouseout="linkLeave()">
             <svg id="yellow-menu-elipse-2"  class="loop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.2 175.2"><defs><style>.\39 6cff5b3-fce7-4435-9300-d3083c2ac1af{fill:none;stroke:#ffeb0c;stroke-miterlimit:10;stroke-width:3px;}</style></defs><title>Fichier 4</title><g id="756c3ea5-c951-4b9f-b986-f6af3e5b061d" data-name="Calque 2"><g id="f0488e05-3a45-4496-a0c7-d75b7f8a10f1" data-name="Calque 1"><circle class="96cff5b3-fce7-4435-9300-d3083c2ac1af" cx="87.6" cy="87.6" r="86.1"/></g></g></svg>
             <svg id="yellow-menu-elipse-1" class="loop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.87 107.87"><defs><style>.\35 c06db9c-38e3-44e8-a08d-09eb4a2936fa{fill:none;stroke:#ffeb0c;stroke-miterlimit:10;stroke-width:3px;}</style></defs><title>Fichier 3</title><g id="d48a675a-d90a-4835-8a09-007d14cacbfe" data-name="Calque 2"><g id="00ccfec7-d371-4a81-a975-ec37b79ffe1b" data-name="Calque 1"><circle class="5c06db9c-38e3-44e8-a08d-09eb4a2936fa" cx="53.93" cy="53.93" r="52.43"/></g></g></svg>
             <svg id="yellow-menu-wrap" class="preloader-actived" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.13 47.13"><defs><style>.e0bed4ed-9525-48ad-8a91-2eabf5c168e1{fill:#ffeb0c;stroke:#ffeb0c;stroke-miterlimit:10;stroke-width:0.81px;}</style></defs><title>Fichier 2</title><g id="817cb391-05c3-4e50-9bc7-40e645f124b2" data-name="Calque 2"><g id="b074bd06-adac-4a54-9152-b1782fbe5a17" data-name="Calque 1"><circle class="e0bed4ed-9525-48ad-8a91-2eabf5c168e1" cx="23.57" cy="23.57" r="23.16"/></g></g></svg>
@@ -44,13 +52,13 @@
                         <h1>L’information <br>puissante</h1>
                     </div>
                     <div class="mantra-title-wrap" style="position: relative; bottom: 0px; transition: 1400ms; height: 100%; float: left; width: 90%;">
-                        <h1 >L'oeil <br> pertinent</h1>
+                        <h1 >La pertinence <br> de l'oeil</h1>
                     </div>
                     <div class="mantra-title-wrap" style="position: relative; bottom: 0px; transition: 1400ms; height: 100%; float: left; width: 90%;">
                         <h1 >L'expérience<br>avant tout</h1>
                     </div>
                     <div class="mantra-title-wrap" style="position: relative; bottom: 0px; transition: 1400ms; height: 100%; float: left; width: 90%;">
-                        <h1>Des devs qui<br>n’ont pas peur</h1>
+                        <h1>Les devs n'ont <br> pas peur</h1>
                     </div>
                 </div>
             </div>
@@ -63,25 +71,23 @@
                         <div id="service-text-transition" class="hidden"></div>
                         <div class="service-text active">
                             <h3>Stratégie</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nostrum mollitia error aut delectus voluptates dicta molestias quam maiores ipsum deleniti asperiores ipsa </p>
+                            <p>Nous vous accompagnons dans l'amélioration de la notoriété de votre marque grâce à des stratégies de communication et l’utilisation de nouvelles technologies. Nous effectuons une analyse des opportunités de votre marché, un ciblage de votre clientèle, pour atteindre un positionnement efficace.</p>
                         </div>
                         <div class="service-text hidden">
                             <h3>Web Marketing</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nostrum mollitia error aut delectus voluptates dicta molestias quam maiores ipsum deleniti asperiores ipsa </p>
+                            <p>Nous vous permettons d’analyser vos services ainsi que les comportements de vos clients, grâce à des outils tels que l'analytics, l'AB Testing ou les leviers d'acquisitions, dans le but d’étendre votre efficacité et notoriété sur internet.</p>
                         </div>
                         <div class="service-text hidden">
                             <h3>Design Graphique</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nostrum mollitia error aut delectus voluptates dicta molestias quam maiores ipsum deleniti asperiores ipsa </p>
+                            <p>Nous pensons et élaborons votre image (logotype, branding, print) pour vous permettre de proposer une identité graphique  cohérente et pertinente à vos clients.</p>
                         </div>
                         <div class="service-text hidden">
                             <h3>UI&UX</h3>
-                            <p>Matérialiser une expérience utilisateur pertinente via des interfaces graphique, parcours et scénarisations. Notre équipe se charge de l’ergonomie, de l’accessibilité et des performances de votre projet.
-                            </p>
+                            <p>Notre équipe se charge de l’ergonomie, de l’accessibilité et des performances de votre projet. Nous vous concevons une expérience utilisateur (UX) efficace via des interfaces graphiques, parcours et scénarisations.</p>
                         </div>
                         <div class="service-text hidden">
                             <h3>web & web app</h3>
-                            <p>Nos développeurs sont là pour répondre à tous les chalenges. Du classique <i>Wordpress</i> en passant par les E-Commerces ou des outils web métiers afin d’automatiser, simplifier et optimiser vos outils.
-                            </p>
+                            <p>Nos développeurs sont là pour répondre à tous les challenges. Du classique Wordpress, en passant par les E-Commerces ou des outils web métiers, nous vous permettons d’automatiser, de simplifier et d’optimiser vos outils.</p>
                         </div>
                     </div>
                 </div>
@@ -98,8 +104,8 @@
                 <img src="{{ asset('/img/img_800w/strategie_800w.jpg') }}" alt="" class="slide-item__image">
             </div>
             <div class="slide-item">
-                <!--<img src="{{ asset("/img/michal-kubalczyk.jpg") }}" class="slide-item__image">-->
-                    <img src="{{ asset('/img/img_800w/webmarket_800w.jpg') }}" alt="" class="slide-item__image">
+            <!--<img src="{{ asset("/img/michal-kubalczyk.jpg") }}" class="slide-item__image">-->
+                <img src="{{ asset('/img/img_800w/webmarket_800w.jpg') }}" alt="" class="slide-item__image">
             </div>
             <div class="slide-item">
                 <img src="{{ asset("/img/photo_design-graphique_2.jpg")}}" class="slide-item__image">
@@ -244,11 +250,9 @@
         document.getElementById('service-presentation-text').style.display = "none";
     }
     function goToContact(e){
-        console.log(e);
-        var url;
-        //activePreloader();
+        activePreloader();
         setInterval(function(){
-            //window.location = url + ".html";
+            window.location += "contact";
         },800);
     }
     $('a').click(function (e) {
